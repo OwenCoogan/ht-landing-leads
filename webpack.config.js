@@ -5,11 +5,12 @@ let config = {
   
   entry: "./src/app.js",
   output: {
-    path: path.resolve(__dirname, "./js"),
-    filename: "./app.js"
+    path: path.resolve(__dirname, "./dist"),
+    filename: "./main.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, './'),
+    contentBase: path.join(__dirname, './dist'),
+    filename: "./main.js",
     compress: true,
     port: 8080
   },
