@@ -175,8 +175,13 @@ header {
   text-align: center;
   overflow: hidden; }
   .ht--sponsor-page h2 {
-    color: var(--main-blue);
+    color: white;
     margin: 10%  auto; }
+  .ht--sponsor-page img:last-of-type {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-pink); }
 
 .ht--sponsor-page::before {
   background: url(../img/exclamation.svg) 0 0 repeat;
@@ -199,8 +204,7 @@ header {
     padding: 5%;
     text-align: center; }
   .ht--community-brands .flex--wrapper {
-    display: flex;
-    margin: 10% auto; }
+    display: flex; }
     .ht--community-brands .flex--wrapper article {
       text-align: center;
       width: 45%;
@@ -213,3 +217,60 @@ header {
         .ht--community-brands .flex--wrapper article p em {
           color: var(--main-green);
           font-style: normal; }
+
+.ht--share-link {
+  background-color: var(--main-pink);
+  padding: 5% 7.5%; }
+  .ht--share-link h2 {
+    color: var(--main-blue);
+    padding: 5%;
+    text-align: center; }
+  .ht--share-link p {
+    color: white;
+    font-weight: var(--fonts-bold);
+    text-align: center; }
+  .ht--share-link input {
+    width: 50%;
+    display: block;
+    margin: 10% auto;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid var(--main-blue); }
+  .ht--share-link .flex--wrapper {
+    display: flex;
+    width: 85%;
+    margin: auto; }
+  .ht--share-link .ht--button-md {
+    border-radius: 34px;
+    width: 40%;
+    margin: auto;
+    border: 0;
+    padding: 7px 15px;
+    color: white;
+    background-color: var(--main-blue); }
+    .ht--share-link .ht--button-md a {
+      display: block;
+      margin: auto;
+      text-align: center;
+      position: relative;
+      width: 90%; }
+    .ht--share-link .ht--button-md em {
+      width: 25px;
+      margin-left: 25px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      .ht--share-link .ht--button-md em img {
+        width: 25px; }
+
+@media screen and (max-width: 975px) {
+  .ht--sponsor-page {
+    min-height: 700px; }
+  .ht--share-link input {
+    width: 80%; }
+  .ht--share-link .ht--button-md {
+    margin: 10px auto;
+    width: 80%; }
+    .ht--share-link .ht--button-md em {
+      display: none; } }
