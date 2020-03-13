@@ -167,3 +167,49 @@ header {
   .ht--benefits .flex--wrapper article {
     width: 100%;
     margin: 50px auto; } }
+
+/*Sponsor Page*/
+.ht--sponsor-page {
+  position: relative;
+  background-color: var(--main-green);
+  text-align: center;
+  overflow: hidden; }
+  .ht--sponsor-page h2 {
+    color: var(--main-blue);
+    margin: 10%  auto; }
+
+.ht--sponsor-page::before {
+  background: url(../img/exclamation.svg) 0 0 repeat;
+  background-size: 30px;
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 175%;
+  overflow: hidden;
+  top: -50%;
+  left: -50%;
+  z-index: 0;
+  opacity: .1;
+  transform: rotate(15deg); }
+
+.ht--community-brands {
+  background-color: var(--main-blue); }
+  .ht--community-brands h2 {
+    color: var(--main-green);
+    padding: 5%;
+    text-align: center; }
+  .ht--community-brands .flex--wrapper {
+    display: flex;
+    margin: 10% auto; }
+    .ht--community-brands .flex--wrapper article {
+      text-align: center;
+      width: 45%;
+      margin: auto;
+      padding: 5%; }
+      .ht--community-brands .flex--wrapper article p {
+        margin-top: 10px;
+        color: white;
+        font-weight: 700; }
+        .ht--community-brands .flex--wrapper article p em {
+          color: var(--main-green);
+          font-style: normal; }
