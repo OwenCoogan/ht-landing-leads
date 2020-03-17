@@ -23,6 +23,9 @@ a {
 img {
   max-width: 100%; }
 
+section {
+  padding: 100px 200px !important; }
+
 :root {
   --main-blue: #034b75;
   --main-pink: #ff5ea0;
@@ -42,7 +45,7 @@ img {
   --font-size-title_mob:30px;
   --font-size-subtitle_mob:18px; }
 
-h1, h2, h3, h4, a, p, li, em, b, input, button {
+h1, h2, h3, h4, a, p, li, em, b, input, button, label {
   font-family: var(--fonts) !important; }
 
 header {
@@ -56,27 +59,36 @@ header {
     display: block;
     margin: auto; }
   header .ht-landing-form-text {
-    padding: 100px; }
+    padding: 50px; }
     header .ht-landing-form-text h2 {
       color: var(--main-green); }
   header .form--wrapper {
     margin: 20vh auto;
-    display: flex; }
+    display: flex;
+    max-width: 1000px; }
+    header .form--wrapper p {
+      margin: 25px auto;
+      font-weight: 100; }
     header .form--wrapper div {
-      width: 50%; }
-    header .form--wrapper form input {
-      display: block;
-      width: 100%;
-      padding: 6px 15px;
-      border: 1px solid var(--main-green);
-      border-radius: 50px;
-      margin: 10px; }
-    header .form--wrapper form input[type="submit"] {
-      width: 50%;
-      margin: auto;
-      color: white;
-      border: 0;
-      background-color: var(--main-pink); }
+      width: 40%;
+      margin: auto; }
+    header .form--wrapper form {
+      width: 60%;
+      margin: auto; }
+      header .form--wrapper form input {
+        display: block;
+        width: 100%;
+        padding: 6px 15px;
+        border: 1px solid var(--main-green);
+        border-radius: 50px;
+        margin: 10px;
+        margin: 10px auto; }
+      header .form--wrapper form input[type="submit"] {
+        width: 50%;
+        margin: auto;
+        color: white;
+        border: 0;
+        background-color: var(--main-pink); }
 
 .ht--mission-statement {
   text-align: center;
@@ -117,7 +129,7 @@ header {
     color: var(--main-blue);
     font-weight: bolder; }
   .ht--analytics p, .ht--analytics img {
-    margin: auto; }
+    margin: auto 20px; }
 
 .ht--benefits {
   background-color: var(--main-blue);
@@ -128,7 +140,7 @@ header {
     display: flex; }
     .ht--benefits .flex--wrapper article {
       margin: auto;
-      width: 25%; }
+      width: 20%; }
   .ht--benefits h2 {
     color: white;
     font-weight: var(--fonts-bold); }
@@ -147,26 +159,37 @@ header {
     border: 0;
     padding: 7px 15px;
     color: white;
-    background-color: var(--main-pink); }
+    background-color: var(--main-pink);
+    width: 60%;
+    margin: auto; }
 
 @media screen and (max-width: 975px) {
+  header, section {
+    text-align: center; }
+  section {
+    padding: 50px !important; }
   .form--wrapper, .ht--live-chat, .ht--messaging, .ht--analytics, .flex--wrapper {
     flex-direction: column; }
   header {
-    height: 100%; }
+    height: 100%;
+    padding: 20px; }
     header .form--wrapper {
-      margin: 10vh auto; }
+      margin: 2vh auto; }
       header .form--wrapper .ht-landing-form-text {
-        padding: 35px 10px; }
+        padding: 35px 0;
+        width: 60%; }
       header .form--wrapper div {
         width: 100%; }
       header .form--wrapper form input {
         margin: 10px auto; }
-  header, section {
-    text-align: center; }
+  .ht--analytics img {
+    width: 65%;
+    margin: 25px auto; }
   .ht--benefits .flex--wrapper article {
     width: 100%;
-    margin: 50px auto; } }
+    margin: 50px auto; }
+  .ht--button-wide {
+    width: 100%; } }
 
 /*Sponsor Page*/
 .ht--sponsor-page {
@@ -202,14 +225,15 @@ header {
   .ht--community-brands h2 {
     color: var(--main-green);
     padding: 5%;
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 1%; }
   .ht--community-brands .flex--wrapper {
     display: flex; }
     .ht--community-brands .flex--wrapper article {
       text-align: center;
-      width: 45%;
+      width: 65%;
       margin: auto;
-      padding: 5%; }
+      padding: 3%; }
       .ht--community-brands .flex--wrapper article p {
         margin-top: 10px;
         color: white;
@@ -224,15 +248,16 @@ header {
   .ht--share-link h2 {
     color: var(--main-blue);
     padding: 5%;
-    text-align: center; }
+    text-align: center;
+    font-weight: var(--fonts-bold); }
   .ht--share-link p {
     color: white;
-    font-weight: var(--fonts-bold);
-    text-align: center; }
+    text-align: center;
+    font-weight: 100; }
   .ht--share-link input {
-    width: 50%;
+    width: 75%;
     display: block;
-    margin: 10% auto;
+    margin: 3% auto;
     padding: 10px;
     border-radius: 50px;
     border: 1px solid var(--main-blue); }
@@ -253,20 +278,16 @@ header {
       margin: auto;
       text-align: center;
       position: relative;
-      width: 90%; }
+      width: 90%;
+      font-size: 10px; }
     .ht--share-link .ht--button-md em {
-      width: 25px;
-      margin-left: 25px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%); }
+      width: 15px;
+      margin-left: 5px;
+      margin-top: 5px; }
       .ht--share-link .ht--button-md em img {
-        width: 25px; }
+        width: 15px; }
 
 @media screen and (max-width: 975px) {
-  .ht--sponsor-page {
-    min-height: 700px; }
   .ht--share-link input {
     width: 80%; }
   .ht--share-link .ht--button-md {
