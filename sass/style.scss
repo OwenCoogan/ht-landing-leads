@@ -25,7 +25,11 @@ a {
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
+}
+
+section {
+    padding: 100px 200px !important;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
@@ -60,7 +64,7 @@ img {
 
 
 
-h1,h2,h3,h4,a,p,li,em,b,input,button{
+h1,h2,h3,h4,a,p,li,em,b,input,button,label{
     font-family:var(--fonts) !important;
 
 
@@ -79,7 +83,7 @@ header{
         margin:auto;
     }
     .ht-landing-form-text{
-        padding: 100px;
+        padding: 50px;
         h2{
             color:var(--main-green);
         }
@@ -87,12 +91,20 @@ header{
     .form--wrapper{
         margin:20vh auto;
         display:flex;
+        max-width:1000px;
+        p{
+            margin:25px auto;
+            font-weight:100;
+        }
         div{
-            width:50%;
+            width:40%;
+            margin:auto;
 
         }
 
         form{
+            width: 60%;
+            margin: auto;
             input{
                 display: block;
                 width:100%;
@@ -100,7 +112,7 @@ header{
                 border:1px solid var(--main-green);
                 border-radius: 50px;
                 margin:10px;
-
+                margin: 10px auto;
             }
             input[type="submit"]{
                 width:50%;
@@ -108,6 +120,7 @@ header{
                 color:white;
                 border:0;
                 background-color: var(--main-pink);
+
             }
         }
         
@@ -170,7 +183,7 @@ h2,p{
     }
 
     p,img{
-        margin:auto;
+        margin:auto 20px;
     }
 
 
@@ -185,7 +198,7 @@ h2,p{
         display:flex;
         article{
             margin:auto;
-            width:25%;
+            width:20%;
         }
     }
     h2{
@@ -217,6 +230,8 @@ h2,p{
         padding:7px 15px;
         color:white;
         background-color: var(--main-pink);
+        width: 60%;
+        margin: auto;
 
     }
 
@@ -226,41 +241,215 @@ h2,p{
 
 @media screen and ( max-width:975px){
 
-.form--wrapper,.ht--live-chat,.ht--messaging,.ht--analytics,.flex--wrapper{
-    flex-direction: column;
-}
+    header,section{
+        text-align:center;
+    }
 
-header{
-    height:100%;
-    .form--wrapper{
-        margin: 10vh auto;
-        .ht-landing-form-text{
-            padding: 35px 10px;
+    section {
+        padding: 50px !important;
+    }
+
+    .form--wrapper,.ht--live-chat,.ht--messaging,.ht--analytics,.flex--wrapper{
+        flex-direction: column;
+    }
+
+    header{
+        height:100%;
+        padding: 20px;
+        .form--wrapper{
+            margin: 2vh auto;
+            .ht-landing-form-text{
+                padding: 35px 0;
+                width:60%;
+            }
+            div{
+                width:100%;
+            }
+            form{
+                input{
+                    margin: 10px auto;
+                }
+            }
+        
         }
-        div{
-            width:100%;
+    }
+
+    
+    .ht--analytics{
+        img{
+            width: 65%;
+            margin:25px auto;
+            
         }
-        form{
-            input{
-                margin: 10px auto;
+    }
+
+    .ht--benefits{
+
+        .flex--wrapper {
+            article{
+                width:100%;
+                margin: 50px auto;
             }
         }
-       
+
+    } 
+    .ht--button-wide{
+        width:100%;
     }
 }
-header,section{
-    text-align:center;
+
+
+
+
+
+
+/*Sponsor Page*/
+
+.ht--sponsor-page{
+    position:relative;
+    background-color: var(--main-green);
+    text-align: center;
+    overflow:hidden;
+   
+    h2{
+        color:white;
+        margin:10%  auto ;
+    }
+    img:last-of-type{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color:var(--main-pink);
+    }
+
 }
 
-.ht--benefits{
+.ht--sponsor-page::before{
+    background: url(../img/exclamation.svg) 0 0 repeat;
+    background-size: 30px;
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 175%;
+    overflow: hidden;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    opacity: .1;
+    transform: rotate(15deg);
+}
 
-    .flex--wrapper {
+.ht--community-brands{
+    background-color: var(--main-blue);
+    h2{
+        color:var(--main-green);
+        padding: 5%;
+        text-align:center;
+        padding-bottom: 1%;
+
+    }
+    .flex--wrapper{
+        display:flex;
         article{
-            width:100%;
-            margin: 50px auto;
+            text-align:center;
+            width:65%;
+            margin:auto;
+            padding: 3%;
+            p{
+                margin-top:10px;
+                color:white;
+                font-weight:700;
+                em{
+                    color:var(--main-green);
+                    font-style: normal;
+                }
+            }
         }
     }
+}
+.ht--share-link{
+    background-color: var(--main-pink);
+    padding: 5% 7.5%;
+    h2{
+        color:var(--main-blue);
+        padding: 5%;
+        text-align:center;
+        
+        font-weight:var(--fonts-bold);
 
-} 
+    }
+    p{
+        color:white;
+        text-align:center;
+        font-weight:100;
+    }
+    input{
+        width: 75%;
+        display:block;
+        margin:3% auto;
+        padding:10px;
+        border-radius:50px;
+        border:1px solid var(--main-blue);
+        
+
+    }
+    .flex--wrapper{
+        display: flex;
+        width: 85%;
+        margin: auto;
+        
+    }
+    .ht--button-md{
+        border-radius: 34px;
+        width:40%;
+        margin:auto;
+        border:0;
+        padding:7px 15px;
+        color:white;
+        background-color: var(--main-blue);
+        a{
+            display:block;
+            margin:auto;
+            text-align:center;
+            position:relative;
+            width:90%;
+            font-size: 10px;
+            
+        }
+        em{
+            width:15px;
+            margin-left: 5px;
+            margin-top: 5px;
+            
+            img{
+                width:15px;
+            }
+        }
+
+    }
+
+
 }
 
+@media screen and ( max-width:975px){
+    .ht--sponsor-page{
+    }
+    .ht--share-link {
+        input{
+            width: 80%;   
+        }
+        .ht--button-md{
+            margin:10px auto;
+            width: 80%;
+            em{
+                display:none;
+            }
+        }
+
+
+
+    }
+
+
+
+}
