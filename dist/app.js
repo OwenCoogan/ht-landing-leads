@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   z = 0;
 
   if (copyTextareaBtn) {
+    console.log(copyTextareaBtn.value);
+    console.log(window.location.hostname);
+    copyTextareaBtn.value = window.location.hostname + '/about/parrainage';
     copyTextareaBtn.addEventListener('click', function (event) {
       const message = document.querySelector('.alert_form');
       const alert = document.createTextNode('Lien Copié !');

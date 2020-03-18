@@ -207,7 +207,7 @@ header {
     color: var(--main-pink); }
 
 .ht--sponsor-page::before {
-  background: url(../img/exclamation.svg) 0 0 repeat;
+  background: url(.https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/sponsorship/exclamation.svg) 0 0 repeat;
   background-size: 30px;
   content: "";
   position: absolute;
@@ -267,7 +267,7 @@ header {
     margin: auto; }
   .ht--share-link .ht--button-md {
     border-radius: 34px;
-    width: 40%;
+    width: 250px;
     margin: auto;
     border: 0;
     padding: 7px 15px;
@@ -283,7 +283,10 @@ header {
     .ht--share-link .ht--button-md em {
       width: 15px;
       margin-left: 5px;
-      margin-top: 5px; }
+      margin-top: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
       .ht--share-link .ht--button-md em img {
         width: 15px; }
 
